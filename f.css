@@ -81,8 +81,8 @@ body {
 }
 
 button {
-    padding: 30px 40px;
-    font-size: 3rem;
+    padding: 40px 30px;
+    font-size: 2rem;
     background-color: #e91e63;
     color: white;
     border: none;
@@ -97,7 +97,7 @@ button:hover { background-color: #c2185b; }
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 5rem;
+    font-size: 3rem;
     -webkit-text-stroke: 1px #440637;
     color: #dac3cc;
     font-weight: bold;
