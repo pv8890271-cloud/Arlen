@@ -97,7 +97,7 @@ button:hover { background-color: #c2185b; }
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 45px;
+    font-size: 65px;
     color: #dac3cc;
     font-weight: bold;
     white-space: nowrap;
@@ -124,8 +124,8 @@ button:hover { background-color: #c2185b; }
         opacity: 1;
     }
     100% {
-        bottom: 70%; /* Sube hasta salir del contenedor */
+        bottom: 60%; /* Sube hasta salir del contenedor */
         opacity: 0;    /* Desaparece al final */
-        transform: translateX(-50%) translateY(-300px);
+        transform: translateX(-50%) translateY(-100px);
     }
 }
