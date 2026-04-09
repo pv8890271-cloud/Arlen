@@ -82,7 +82,7 @@ body {
 
 button {
     padding: 10px 20px;
-    font-size: 2rem;
+    font-size: 1.1rem;
     background-color: #e91e63;
     color: white;
     border: none;
@@ -97,8 +97,7 @@ button:hover { background-color: #c2185b; }
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 3rem;
-    -webkit-text-stroke: 1px #440637;
+    font-size: 1rem;
     color: #dac3cc;
     font-weight: bold;
     white-space: nowrap;
