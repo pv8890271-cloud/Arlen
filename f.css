@@ -1,0 +1,132 @@
+body {
+    background-color: rgba(215, 90, 253, 0.678);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.birthday-card {
+    text-align: center;
+}
+
+/* El Pastel */
+.cake {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 50px;
+}
+
+.plate {
+    width: 250px;
+    height: 15px;
+    background: #bdbdbd;
+    position: absolute;
+    bottom: -10px;
+    left: -25px;
+    border-radius: 10px;
+}
+
+.layer {
+    position: absolute;
+    width: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.layer-bottom { height: 60px; background: #6d4c41; bottom: 0; }
+.layer-middle { height: 50px; background: #8d6e63; bottom: 60px; width: 180px; left: 10px; }
+.layer-top    { height: 40px; background: #a1887f; bottom: 110px; width: 160px; left: 20px; }
+
+/* La Vela */
+.candle {
+    width: 10px;
+    height: 40px;
+    background: #ff5252;
+    position: absolute;
+    top: 60px;
+    left: 95px;
+    border-radius: 4px;
+}
+
+.flame {
+    width: 15px;
+    height: 25px;
+    background: #ffeb3b;
+    border-radius: 50% 50% 35% 35%;
+    position: absolute;
+    top: -25px;
+    left: -2.5px;
+    box-shadow: 0 0 15px rgba(255, 235, 59, 0.8);
+    animation: flicker 0.6s infinite alternate;
+}
+
+@keyframes flicker {
+    from { transform: scale(1) rotate(-2deg); opacity: 0.9; }
+    to { transform: scale(1.1) rotate(2deg); opacity: 1; }
+}
+
+/* Mensaje y Botón */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+button:hover { background-color: #c2185b; }
+
+.floating-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    -webkit-text-stroke: 1px #440637;
+    color: #dac3cc;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0; /* Invisible al inicio */
+    pointer-events: none;
+}
+
+/* Esta clase se activará con JS */
+.animate-float {
+    text-align: center;
+    animation: floatUp 15s ease-in forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        bottom: 0%;
+        opacity: 0;
+        transform: translateX(-50%) translateY(0);
+    }
+    20% {
+        opacity: 1; /* Aparece rápido */
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 70%; /* Sube hasta salir del contenedor */
+        opacity: 0;    /* Desaparece al final */
+        transform: translateX(-50%) translateY(-300px);
+    }
+}
